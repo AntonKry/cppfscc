@@ -157,7 +157,7 @@ unsigned Port::Write(const char *buf, unsigned size) throw(SystemException)
 
 unsigned Port::Write(const std::string &str) throw(SystemException)
 {
-    return Write(str.c_str(), str.length());
+    return Write(str.c_str(), (unsigned)str.length());
 }
 
 int Port::Read(char *buf, unsigned size, OVERLAPPED *o) throw(SystemException)
